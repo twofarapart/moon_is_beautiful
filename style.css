@@ -31,10 +31,10 @@ h2 {
     font-style: normal;
 }
 
-.container {
-    width: 100dvw;
-    height: 100dvh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+.count-down {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100vh !important;
+    width: 100vw !important;
+  }
