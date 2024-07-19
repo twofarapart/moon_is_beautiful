@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Transition Animation</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+  }
+  .page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease;
+    opacity: 0;
+  }
+  .video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+  .active {
+    animation: fadeIn 1s forwards;
+  }
+  .hide {
+    animation: fadeOut 1s forwards;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="page text" style="opacity: 1;">Welcome to our site!</div>
+  <div class="page">
+    <video class="video" src="video.mp4" muted></video>
+  </div>
+  <div class="page text">Thank you for visiting!</div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    let currentIndex = 0;
+    const pages = document.querySelectorAll('.page');
+    const video = document.querySelector('video');
+
+    video.addEventListener('play', function() {
+        setTimeout(function() {
+        if (currentIndex === 1) { // Ensure the timeout applies only to the video page
+            transitionNext();
+        }
+        }, 12000); // Wait for 12 seconds before transitioning
+    });
+
+    function transitionNext() {
+        pages[currentIndex].classList.add('hide');
+        currentIndex = (currentIndex + 1) % pages.length;
+        pages[currentIndex].classList.add('active');
+        if (currentIndex === 1) { // If next page is video, play it
+        video.play();
+        }
+    }
+
+    setTimeout(transitionNext, 3000); // Start the transition from the first text
+    });
+</script>
+
+</body>
+</html>
