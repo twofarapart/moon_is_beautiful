@@ -2,8 +2,10 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
 body {
     background-color: smokewhite;
+    overflow: hidden;
 }
 
 .count-down {
@@ -12,10 +14,12 @@ body {
     margin: auto;
     padding: 20px;
 }
+
 .count-down .flipdown {
     margin: auto;
     width: 600px;
 }
+
 .count-down h1 {
     text-align: center;
     font-weight: 400;
@@ -32,9 +36,119 @@ h2 {
 }
 
 .count-down {
+    margin-top: 80px;
     display: flex !important;
     justify-content: center !important;
-    align-items: center !important;
+    align-items: flex-start !important;
     height: 100vh !important;
     width: 100vw !important;
-  }
+}
+
+.wish,
+h2,
+.title {
+    font-family: "Tangerine", cursive;
+    font-weight: 700;
+    font-style: normal;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.title {
+    font-size: 100px;
+}
+
+h2 {
+    font-size: 150px;
+}
+
+.wish {
+    font-size: 80px;
+    line-height: 120px;
+}
+
+.temp-page-1 {
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 300px;
+}
+
+.temp-page-2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bday {
+    font-family: cursive;
+    font-weight: 700;
+    font-style: normal;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 120px;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.temp-page-1 {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.temp-page-1 span {
+    text-transform: uppercase;
+    display: block;
+}
+
+.text1 {
+    color: white;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    position: relative;
+    /*   shorthand animation property: name | duration | iteration count */
+    /*   animation: text 4s 1; */
+    animation-name: text;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes text {
+    0% {
+        color: black;
+        margin-bottom: -40px;
+    }
+
+    30% {
+        letter-spacing: 25px;
+        margin-bottom: -40px;
+    }
+
+    85% {
+        letter-spacing: 8px;
+        margin-bottom: -40px;
+    }
+
+    100% {
+        margin-bottom: 20px;
+    }
+}
+
+.container {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
