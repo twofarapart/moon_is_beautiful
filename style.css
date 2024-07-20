@@ -204,5 +204,7 @@ canvas {
     bottom: 0;
     top: 0;
     /* shades of yellow radial gradient */
-    background: radial-gradient(circle at 50% 50%, #f6d365, #fda085);
+    /* background: radial-gradient(circle at 50% 50%, #f6d365, #fda085); */
+    background: radial-gradient(circle at 50% 50%, #ffafbd,  #ffc3a0);
+    /* background: radial-gradient(circle at 50% 50%, #ffafbd,  #ffc3a0); */
 }
