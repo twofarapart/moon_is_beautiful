@@ -1,64 +1,47 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>❤️</title>
+  <title>❤</title>
   <link rel="stylesheet" href="./style.css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Open+Sans&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Style Flipdown -->
+  <link href="https://pbutcher.uk/flipdown/css/flipdown/flipdown.css" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet" />
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<html lang="en">
-    <head>
-        <title>Countdown Timer</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Open+Sans&display=swap"
-        rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
-        <!-- Style Flipdown -->
-        <link href="https://pbutcher.uk/flipdown/css/flipdown/flipdown.css" rel="stylesheet" />
-        <!-- Font Awesome -->
-        <link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet" />
-        <meta name="viewport" content="width=device-width, initial-scale=0.5">
-    </head>
-    <body>
-        <div class="temp-page-1">
-            <canvas id="c"></canvas>
-            <!-- Replace the .birthday-text element with a div for the card -->
-            <div class="birthday-card">
-            </div>
+  <div class="temp-page-1">
+    <canvas id="c"></canvas>
+    <!-- Replace the .birthday-text element with a div for the card -->
+    <div class="birthday-card">
+    </div>
+  </div>
+  <div class="temp-page-2">
+    <video class="video" src="video.mp4" muted preload="auto"></video>
+  </div>
+  <div class="container">
+    <div class="count-down">
+      <div>
+        <h2 class="title">Until we meet...</h2>
+        <div class="flipdown" id="flipdown"></div>
+        <br>
+        <div class="wish">
+          I don't have enough words to describe how much I adore you.
+          You know that feeling you get when you're with someone, and you just feel like you're home?
+          Well, that's how I feel when I talk with you.
+          I can't wait to meet you in person.
         </div>
-        <div class="temp-page-2">
-            <video class="video" src="video.mp4" muted></video>
-        </div>
-        <div class="container">
-            <div class="count-down">
-                <div>
-                    <h2 class="title">Until we meet...</h2>
-                    <div class="flipdown" id="flipdown"></div>
-                    <br>
-                    <div class="wish">
-                        <span class="wish">I don't have enough words to describe how much I adore you.</span><br>
-                        You know that feeling you get when you're with someone, and you just feel like you're home?
-                        Well, that's how I feel when I talk with you.
-                        I can't wait to meet you in person.
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
+    </div>
+  </div>
 
-        <!-- Scripts -->
-        <script src="https://pbutcher.uk/flipdown/js/flipdown/flipdown.js"></script>
-        <!-- <script src="vendor/js/main.js"></script> -->
-    </body>
-</html>
-<!-- partial -->
-  <script  src="./script.js"></script>
+  <!-- Scripts -->
+  <script src="./script.js" async></script>
+  <script src="https://pbutcher.uk/flipdown/js/flipdown/flipdown.js" async></script>
 </body>
 </html>
