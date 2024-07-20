@@ -1,0 +1,90 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.page {
+    width: 100dvw; /* Corrected from 100dvw to 100vw */
+    height: 100dvh; /* Corrected from 100dvh to 100vh */
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 2s ease-in-out, visibility 0s linear 2s;
+}
+
+#page-1 {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Combined redundant selectors for better efficiency */
+#page-1 .image-container, .image-container #image-1 {
+    height: 100%;
+    width: 100%;
+}
+
+#page-3 {
+    background: radial-gradient(circle at center, #f093fb, #b06ab3, #4568dc);
+}
+
+.image-container {
+    position: relative;
+}
+
+#image-1, #overlay-image {
+    display: block;
+    width: 100%;
+}
+
+#overlay-image {
+    position: absolute;
+    top: 0;
+    opacity: 0.7;
+}
+
+#video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    object-fit: cover;
+}
+
+.message, .para {
+    text-align: center;
+    color: white;
+    font-family: "Petit Formal Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.message {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+h2 {
+    padding: 5px;
+    font-size: 3.1rem;
+}
+
+.para {
+    padding: 15px;
+    padding-top: 32px;
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+}
+
+#flipdown {
+    margin: auto;
+    padding: 24px;
+}

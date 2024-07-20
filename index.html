@@ -1,47 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>❤</title>
-  <link rel="stylesheet" href="./style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Open+Sans&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Style Flipdown -->
-  <link href="https://pbutcher.uk/flipdown/css/flipdown/flipdown.css" rel="stylesheet" />
-  <!-- Font Awesome -->
-  <link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="./flipdown.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="temp-page-1">
-    <canvas id="c"></canvas>
-    <!-- Replace the .birthday-text element with a div for the card -->
-    <div class="birthday-card">
-    </div>
-  </div>
-  <div class="temp-page-2">
-    <video class="video" src="video.mp4" muted preload="auto"></video>
-  </div>
-  <div class="container">
-    <div class="count-down">
-      <div>
-        <h2 class="title">Until we meet...</h2>
-        <div class="flipdown" id="flipdown"></div>
-        <br>
-        <div class="wish">
-          I don't have enough words to describe how much I adore you.
-          You know that feeling you get when you're with someone, and you just feel like you're home?
-          Well, that's how I feel when I talk with you.
-          I can't wait to meet you in person.
+    <div id="page-1" class="page">
+        <div class="image-container">
+            <img id="image-1" src="./image-1.jpg" alt="Background Image">
+            <img id="overlay-image" src="./happy-bday.png" height="300" alt="Happy Birthday">
         </div>
-      </div>
     </div>
-  </div>
-
-  <!-- Scripts -->
-  <script src="./script.js" async></script>
-  <script src="https://pbutcher.uk/flipdown/js/flipdown/flipdown.js" async></script>
+    <div id="page-2" class="page">
+        <video id="video" src="./video.mp4" muted preload="auto"></video>
+    </div>
+    <div id="page-3" class="page">
+        <h2 class="message">Until we meet...</h2>
+        <div id="flipdown" class="flipdown flipdown__theme-dark"></div>
+        <div class="para">
+            I don't have enough words to describe how much I adore you.
+            You know that feeling you get when you're with someone, and you just feel like you're home?
+            Well, that's how I feel when I talk with you.
+            I can't wait to meet you in person.
+        </div>
+    </div>
+    <script src="./flipdown.min.js"></script>
+    <script src="./index.js"></script>
 </body>
 </html>
