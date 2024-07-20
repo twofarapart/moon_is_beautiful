@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             container.style.display = 'block'; // Make the container take up space
 
             // Use setTimeout to allow the browser to render the container before starting the fade-in effect
-            setTimeout(() => container.style.opacity = 1, 10); // Start fade-in after a very short delay
+            setTimeout(() => container.style.opacity = 1, 200); // Start fade-in after a very short delay
         }, 12000); // 12 seconds
     }, 7000); // 3 seconds
 
