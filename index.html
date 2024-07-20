@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amaryllis ❤️</title>
+    <link rel="preload" href="./flipdown.min.css" as="style">
+    <link rel="preload" href="./index.css" as="style">
+    <link rel="preload" href="./image-1.jpg" as="image">
+    <link rel="preload" href="./video.mp4" as="video">
     <link rel="stylesheet" href="./flipdown.min.css">
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,8 +17,8 @@
 <body>
     <div id="page-1" class="page">
         <div class="image-container">
-            <img id="image-1" src="./image-1.jpg" alt="Background Image">
-            <img id="overlay-image" src="./happy-bday.png" height="300" alt="Happy Birthday">
+            <img id="image-1" src="./image-1.jpg" alt="Background Image" loading="lazy">
+            <img id="overlay-image" src="./happy-bday.png" height="300" alt="Happy Birthday" loading="lazy">
         </div>
     </div>
     <div id="page-2" class="page">
@@ -30,7 +34,7 @@
             I can't wait to meet you in person.
         </div>
     </div>
-    <script src="./flipdown.min.js"></script>
-    <script src="./index.js"></script>
+    <script src="./flipdown.min.js" defer></script>
+    <script src="./index.js" defer></script>
 </body>
 </html>
