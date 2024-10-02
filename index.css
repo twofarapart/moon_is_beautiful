@@ -77,6 +77,22 @@ h2 {
     font-size: 3.1rem;
 }
 
+.moon {
+    text-align: center;
+    display: none;
+}
+
+.moon img {
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+    height: 320px;
+}
+
+.surprise {
+    font-family: "Bellota", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .para {
     padding: 15px;
     padding-top: 32px;

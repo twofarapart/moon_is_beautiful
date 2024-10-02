@@ -5,7 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     new FlipDown(countdownDate / 1000 - 1)
         .start()
-        .ifEnded(() => console.log('The countdown has ended!'));
+        .ifEnded(() => {
+            const message = document.getElementById('message');
+            message.classList.add('surprise');
+            message.innerHTML = '<h2>The moon is beautiful, isn\'t it?</h2>';
+            document.getElementById('para').style.display = 'none';
+
+            document.getElementsByClassName('moon')[0].style.display = 'block';
+        });
 
     function transitionToPage(pageId) {
         pages.forEach(page => {
