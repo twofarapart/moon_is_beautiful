@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const countdownDate = new Date("Oct 06, 2024 08:30:00").getTime();
-    const pages = document.querySelectorAll('.page'); // Cache all pages
-    const videoElement = document.querySelector('#video'); // Cache video element
+    const pages = document.querySelectorAll('.page');
+    const videoElement = document.querySelector('#video');
 
     new FlipDown(countdownDate / 1000 - 1)
         .start()
@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function transitionToPage(pageId) {
         pages.forEach(page => {
-            // Batch style changes to minimize reflows
             requestAnimationFrame(() => {
                 page.style.cssText = 'opacity: 0; visibility: hidden; transition: opacity 2s ease-in-out, visibility 0s linear 2s;';
             });
@@ -25,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const targetPage = document.getElementById(pageId);
         requestAnimationFrame(() => {
             targetPage.style.display = 'block';
-            // Delay changes to next frame for smooth transition
             requestAnimationFrame(() => {
                 targetPage.style.cssText = 'opacity: 1; visibility: visible; transition: opacity 2s ease-in-out, visibility 0s linear 0s;';
                 if (pageId === 'page-2') {
